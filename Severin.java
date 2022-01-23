@@ -2,8 +2,13 @@
 public class Severin extends OutdoorsArea {
 	private NPC fairy;
 	boolean rocksRemoved;
+	private String name;
+	private String description;
 	
-	public Severin() {
+	
+	public Severin(String name, String description) {
+		super(name, description);
+
 		
 	}
 	

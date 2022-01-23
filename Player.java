@@ -5,8 +5,9 @@ public class Player {
 	private int health;
 	private boolean bookStolen;
 	
-	public Player (){
-		
-		
+	public Player (String name, Location position){
+		this.name = name;
+		this.position = position;	
 	}
+	
 }

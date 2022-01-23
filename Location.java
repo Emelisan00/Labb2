@@ -4,7 +4,9 @@ public class Location {
  private String description;
  private Location[] neighbors;
  
- public Location() {
+ public Location(String name, String description) {
+	 this.name = name;
+		this.description = description;
 	 
  }
  

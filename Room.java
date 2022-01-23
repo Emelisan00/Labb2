@@ -2,8 +2,8 @@
 public class Room extends Location {
 	private int size;
 	
-	public Room() {
-		
+	public Room(String name, String description) {
+		super(name, description);
 	}
 
 }

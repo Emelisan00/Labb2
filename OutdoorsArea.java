@@ -2,8 +2,9 @@
 public class OutdoorsArea extends Location{
 	private String weather;
 	
-	public OutdoorsArea() {
-		
+	public OutdoorsArea(String name, String description) {
+		super(name, description);
+
 	}
 
 }

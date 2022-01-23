@@ -1,8 +1,13 @@
 
 public class Celestin extends OutdoorsArea{
 	private NPC alaric;
+	private String name;
+	private String description;
+	
 
-	public Celestin() {
+	public Celestin(String name, String description) {
+		super(name, description);
+
 		
 	}
 	

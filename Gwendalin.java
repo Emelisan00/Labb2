@@ -1,7 +1,12 @@
 
 public class Gwendalin extends OutdoorsArea{
+	private String name;
+	private String description;
 	
-	public Gwendalin() {
+	
+	public Gwendalin(String name, String description) {
+		super(name, description);
+
 		
 	}
 	
