@@ -26,6 +26,8 @@ public class Player {
 	public void doCommand (String command) {
 		if (command.equals("Move")) {
 			System.out.println("Where would you like to go? North, east, south or west?");
+			
+			
 		
 		}
 	}
