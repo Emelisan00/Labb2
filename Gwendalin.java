@@ -1,13 +1,8 @@
 
 public class Gwendalin extends OutdoorsArea{
-	private String name;
-	private String description;
 	
-	
-	public Gwendalin(String name, String description) {
-		super(name, description);
-
-		
+	public Gwendalin(String name, String description, String shortDescription) {
+		super(name, description, shortDescription);	
 	}
 	
 	public void wakeUp() {

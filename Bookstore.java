@@ -1,11 +1,8 @@
  
 public class Bookstore extends Room{
-	private String name;
-	private String description;
 	
-	
-	public Bookstore(String name, String description) {
-		super(name, description);
+	public Bookstore(String name, String description, String shortDescription) {
+		super(name, description, shortDescription);
 		
 	}
 
