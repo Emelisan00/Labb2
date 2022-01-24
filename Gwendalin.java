@@ -5,24 +5,9 @@ public class Gwendalin extends OutdoorsArea{
 		super(name, description, shortDescription);	
 	}
 	
-	public void wakeUp() {
-		
+	public void doCommand(String command) {
+	
 	}
 	
-	public void readNote() {
-		
-	}
 	
-	public void ridetoSeverin() {
-		
-	}
-	
-	public void rideToCelestin() {
-		
-	}
-	
-	public void thereIsNoWay() {
-		
-	}
-
 }

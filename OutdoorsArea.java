@@ -6,5 +6,9 @@ public class OutdoorsArea extends Location{
 		super(name, description, shortDescription);
 
 	}
+	
+	public void doCommand(String command) {
+		
+	}
 
 }

@@ -10,10 +10,10 @@ public class Cabin extends Room {
 		
 	}
 
-	public void arrive() {
+	public void doCommand(String command) {
 		
 	}
-	
+
 	public void speakWithMelanthia() {
 		
 	}
@@ -22,13 +22,7 @@ public class Cabin extends Room {
 		
 	}
 	
-	public void goBackToSeverin() {
-		
-	}
-	
-	public void thereIsNoWay() {
-		
-	}
+
 
 }
 

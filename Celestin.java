@@ -7,8 +7,7 @@ public class Celestin extends OutdoorsArea{
 
 		
 	}
-	
-	public void arrive() {
+	public void doCommand(String command) {
 		
 	}
 	
@@ -20,23 +19,9 @@ public class Celestin extends OutdoorsArea{
 		
 	}
 	
-	public void leaveAlaric() {
-		
-	}
 	
 	public void readBook() {
 		
 	}
-	public void rideToBookstore() {
-		
-
-}
-
-	public void rideToGwendalin() {
-		
-	}
 	
-	public void thereIsNoWay() {
-		
-	}
 }

@@ -10,9 +10,10 @@ public class Severin extends OutdoorsArea {
 		
 	}
 	
-	public void arrive() {
+	public void doCommand(String command) {
 		
 	}
+	
 	
 	public void moveRocks() {
 		
@@ -26,18 +27,7 @@ public class Severin extends OutdoorsArea {
 		
 	}
 	
-	public void rideToGwendalin() {
-		
-	}
-	
-	public void rideToCabin() {
-		
-	
 
-}
-	public void thereIsNoWay() {
-		
-	}
 
 
 }

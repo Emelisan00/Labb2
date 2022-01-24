@@ -6,6 +6,7 @@ import java.util.*;
 	public class Game {
 	    private Scanner scan; 
 	    private ArrayList<Location> location;
+	  
 	    private Player player;
 	    
 	    public Game() {
@@ -16,13 +17,22 @@ import java.util.*;
 		    Location Severin = new Severin("Severin", "Beskriv", "liten besk");
 		    Location Bookstore = new Bookstore("Bookstore", "beskriv", "liten besk"); 
 		    Location Cabin = new Cabin("Cabin", "beskriv", "liten besk");
+		    Location Field = new Field("Field", "beskriv", "liten beskriv");
 		    
 		    location.add(Gwendalin);
 		    location.add(Celestin);
 		    location.add(Severin);
 		    location.add(Bookstore);
-		    location.add(Cabin);	    
-
+		    location.add(Cabin);	
+		    location.add(Field);
+		    
+		    Gwendalin.setNeighbour(Bookstore, Severin, Field, Celestin );
+		    Celestin.setNeighbour(null, Gwendalin, null, null);
+		    Severin.setNeighbour(null, Cabin, null, Gwendalin);
+		    Bookstore.setNeighbour(null, null, Gwendalin, null);
+		    Cabin.setNeighbour(null, null, null, Severin);
+		    
+		    //SKAPA IF = NULL SÅ PRINTA "THERE IS NO WAY"
 		    	    }
 
 	    public void run() {
@@ -42,7 +52,7 @@ import java.util.*;
 		    
 		    System.out.println("What do you want to do?");
 		    command = scan.nextLine();
-		  //  player.doCommand(command);
+		    player.doCommand(command);
 		}	    
 	    }
 	}

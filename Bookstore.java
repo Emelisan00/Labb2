@@ -5,8 +5,7 @@ public class Bookstore extends Room{
 		super(name, description, shortDescription);
 		
 	}
-
-	public void arrive() {
+	public void doCommand(String command) {
 		
 	}
 	
@@ -14,14 +13,7 @@ public class Bookstore extends Room{
 		
 	}
 	
-	public void goBackToCelestin() {
-		
-	}
 	
-	public void thereIsNoWay() {
-		
-	}
-
 
 
 	
