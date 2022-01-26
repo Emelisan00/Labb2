@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 
 
-public class Location {
+public  class Location {
  private String name;
  private String description;
  private String shortDescription;
  private Location neighbourWest;
  private Location neighbourEast;
- private Location[] neighbours = new Location[4];
+ Location[] neighbours = new Location[4];
 
  
  public Location(String name, String description, String shortDescription) {
@@ -34,8 +34,11 @@ public class Location {
 	}
 
  
- public void doCommand(String command) {
-	 
+ public void doCommand(String command, Player player){
+ 
+ //ANNROPS I ALLA SUBKLASSERS DOCOMMAND
+ //fixPath(command);
+ 
  }
 
 }

@@ -5,9 +5,10 @@ public class Player {
 	private int health;
 	private boolean bookStolen;
 	
-	public Player (String name){
+	public Player (String name, Location position){
 		this.name = name;
-		//this.position = position;	
+		this.position = position;
+		health = 100;
 	}
 	
 	public Location getLocation () {
@@ -24,12 +25,51 @@ public class Player {
 	}
 	
 	public void doCommand (String command) {
-		if (command.equals("Move")) {
-			System.out.println("Where would you like to go? North, east, south or west?");
-			
-			
 		
+		position.doCommand(command, this);
+		if (command.equals("north")) {
+			Location newPositionNorth = getLocation().neighbours[1];
+
+			newPositionNorth = getLocation().neighbours[3];
+
+			newPositionNorth.describeYourself();
+
+			position = newPositionNorth;
+
+		}
+		
+		if (command.equals("east")) {
+
+			Location newPositionEast = getLocation().neighbours[1];
+
+			newPositionEast.describeYourself();
+
+			position = newPositionEast;
+		}
+		
+		if (command.equals("north")) {
+			Location newPositionNorth = getLocation().neighbours[1];
+
+			newPositionNorth = getLocation().neighbours[3];
+
+			newPositionNorth.describeYourself();
+
+			position = newPositionNorth;
+
+		}
+		
+		
+
+		if (command.equals("west")) {
+			Location newPositionWest = getLocation().neighbours[1];
+
+			newPositionWest = getLocation().neighbours[3];
+
+			newPositionWest.describeYourself();
+
+			position = newPositionWest;
+		
+
 		}
 	}
-	
 }
