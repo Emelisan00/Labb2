@@ -5,16 +5,18 @@ public class Bookstore extends Room{
 		super(name, description, shortDescription);
 		
 	}
-	public void doCommand(String command) {
-		
+	public void doCommand(String command, Player player) {
+		readBook(command, player);
 	}
 	
-	public void stealBook() {
-		
+	public void readBook(String command, Player player) {
+			System.out.println("hej");	
+			
+		}
 	}
 	
 	
 
 
 	
-}
+

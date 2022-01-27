@@ -8,7 +8,10 @@ public class Player {
 	public Player (String name, Location position){
 		this.name = name;
 		this.position = position;
-		health = 100;
+		int health = 100;
+	}
+	public String getName() {
+		return name;
 	}
 	
 	public Location getLocation () {
@@ -20,56 +23,28 @@ public class Player {
 		
 	}
 	
-	public void describeYourself ( ) {
+	public void describeYourself () {
 		
 	}
 	
 	public void doCommand (String command) {
-		
+		if (command.equals("talk")) {
+			try {
+				position.getNPC().doCommand(command, this);
+			} catch (Exception e) {
+				System.out.println("There is no one to talk to");
+			}
+			
+		}
+		else if (command.equals("read")) {
+			try {
+				position.doCommand(command,this);
+				
+			} catch (Exception e) {
+				System.out.println("There is no book to read.");
+			}
+		}
+		else
 		position.doCommand(command, this);
-		if (command.equals("north")) {
-			Location newPositionNorth = getLocation().neighbours[1];
-
-			newPositionNorth = getLocation().neighbours[3];
-
-			newPositionNorth.describeYourself();
-
-			position = newPositionNorth;
-
-		}
-		
-		if (command.equals("east")) {
-
-			Location newPositionEast = getLocation().neighbours[1];
-
-			newPositionEast.describeYourself();
-
-			position = newPositionEast;
-		}
-		
-		if (command.equals("north")) {
-			Location newPositionNorth = getLocation().neighbours[1];
-
-			newPositionNorth = getLocation().neighbours[3];
-
-			newPositionNorth.describeYourself();
-
-			position = newPositionNorth;
-
-		}
-		
-		
-
-		if (command.equals("west")) {
-			Location newPositionWest = getLocation().neighbours[1];
-
-			newPositionWest = getLocation().neighbours[3];
-
-			newPositionWest.describeYourself();
-
-			position = newPositionWest;
-		
-
-		}
 	}
 }
