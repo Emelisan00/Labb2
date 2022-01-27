@@ -2,18 +2,14 @@
 public class Severin extends OutdoorsArea {
 	private NPC fairy;
 	boolean rocksRemoved;
-
 	
-	public Severin(String name, String description, String shortDescription) {
-		super(name, description, shortDescription);
-
+	public Severin() {
 		
 	}
 	
-	public void doCommand(String command) {
+	public void arrive() {
 		
 	}
-	
 	
 	public void moveRocks() {
 		
@@ -27,7 +23,18 @@ public class Severin extends OutdoorsArea {
 		
 	}
 	
+	public void rideToGwendalin() {
+		
+	}
+	
+	public void rideToCabin() {
+		
+	
 
+}
+	public void thereIsNoWay() {
+		
+	}
 
 
 }

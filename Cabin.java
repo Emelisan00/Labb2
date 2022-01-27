@@ -2,18 +2,14 @@
 public class Cabin extends Room {
 	private NPC Melanthia;
 
-
+	public Cabin() {
+		
+	}
 	
-	public Cabin(String name, String description, String shortDescription) {
-		super(name, description, shortDescription);
-
+	public void arrive() {
 		
 	}
-
-	public void doCommand(String command) {
-		
-	}
-
+	
 	public void speakWithMelanthia() {
 		
 	}
@@ -22,7 +18,13 @@ public class Cabin extends Room {
 		
 	}
 	
-
+	public void goBackToSeverin() {
+		
+	}
+	
+	public void thereIsNoWay() {
+		
+	}
 
 }
 

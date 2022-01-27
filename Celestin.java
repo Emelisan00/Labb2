@@ -1,18 +1,12 @@
 
 public class Celestin extends OutdoorsArea{
 	private NPC alaric;
-	
-	public Celestin(String name, String description, String shortDescription, NPC alaric) {
-		super(name, description, shortDescription);
-		this.alaric = alaric;
 
+	public Celestin() {
 		
 	}
 	
-	public NPC getNPC() {
-		return alaric;
-	}
-	public void doCommand(String command) {
+	public void arrive() {
 		
 	}
 	
@@ -24,9 +18,23 @@ public class Celestin extends OutdoorsArea{
 		
 	}
 	
+	public void leaveAlaric() {
+		
+	}
 	
 	public void readBook() {
 		
 	}
+	public void rideToBookstore() {
+		
+
+}
+
+	public void rideToGwendalin() {
+		
+	}
 	
+	public void thereIsNoWay() {
+		
+	}
 }
