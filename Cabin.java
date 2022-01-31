@@ -1,26 +1,25 @@
 
 public class Cabin extends Room {
-	private NPC Melanthia;
+	private NPC melanthia;
 
 
-	
-	public Cabin(String name, String description, String shortDescription) {
+	public Cabin(String name, String description, String shortDescription, NPC melanthia) {
 		super(name, description, shortDescription);
+		this.melanthia = melanthia;
 
-		
 	}
+	@Override
+	public NPC getNPC() {
+		return melanthia;
+	}
+	
+
 
 	public void doCommand(String command) {
-		
+
 	}
 
-	public void speakWithMelanthia() {
-		
-	}
-	
-	public void fightMalanthia() {
-		
-	}
+
 	
 
 
