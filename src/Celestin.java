@@ -16,5 +16,5 @@ public class Celestin extends OutdoorsArea{
 		
 	}
 
-	
+
 }

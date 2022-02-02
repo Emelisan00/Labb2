@@ -6,6 +6,7 @@ public class Bookstore extends Room{
 		super(name, description, shortDescription);
 		book = new Book("book");
 		
+		
 	}
 	public void doCommand(String command, Player player) {
 		fixPath(command, player);
@@ -16,7 +17,10 @@ public class Bookstore extends Room{
 	 public Item getItem() {
 		 return book;
 }
-}
+
+	}
+
+
 	
 	
 

@@ -9,7 +9,6 @@ public class Shovel extends ToolItem {
 			
 			player.getLocation().dig(player);
 			
-
 		}
 	}
 

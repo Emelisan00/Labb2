@@ -1,11 +1,11 @@
 import java.util.ArrayList;
 
 
-public  class Location {
+public  abstract class Location {
  private String name;
  private String description;
  private String shortDescription;
- private Location[] neighbours = new Location[4];
+ protected Location[] neighbours = new Location[4];
  private boolean beenHereBefore;
  private boolean hasBarrier;
  private boolean hasDug;
@@ -27,6 +27,8 @@ public  class Location {
 	neighbours[3] = west;
 	 
  }
+ public abstract void connections();
+ 
  public boolean getHasDug() {
 		return hasDug;
 	}
@@ -61,10 +63,13 @@ public  class Location {
  
  public void describeYourself () {
 		System.out.println(getDescription());
+		connections();
+		
 	}
  
  public void shortDescribeYourself() {
 	 System.out.println(getShortDescription());
+	 connections();
 	 
  }
  
@@ -117,8 +122,6 @@ public  class Location {
 	
 
 	public void doCommand(String command, Player player) {
-
-		// ANNROPS I ALLA SUBKLASSERS DOCOMMAND
 		
 		fixPath(command, player);
 

@@ -18,11 +18,14 @@ public class Cabin extends Room {
 	public void doCommand(String command) {
 
 	}
+	
+
+	}
 
 
 	
 
 
-}
+
 
 

@@ -12,25 +12,22 @@ public class Field extends OutdoorsArea{
 	public void doCommand(String command, Player player) {
 		if(command.equals("dig")) {
 			dig( player);
-			
-			
-			}else
-				fixPath(command, player);
+
+		} else
+			fixPath(command, player);
 	}
-	
+
 	public void dig(Player player) {
-		if (getHasDug() == false) {
-	System.out.println("You dig into the field and you find a shiny bottle filled with green liquid. It is labeled\n\n HEALTH + 50 \n\n.");
-	setHasDug(true);
-	} else
-	System.out.println("You have already dug here!");
-	}
+		//if (getHasDug() == false) {
+			System.out.println("You dig into the soil, but find nothing.");
+		}
+		
 	
+
 	public Item getItem() {
-		
-			
-			return greenPotion;
-		
+
+		return greenPotion;
+
 	}
 	
 	

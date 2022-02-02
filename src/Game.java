@@ -52,7 +52,7 @@ import java.util.*;
 
 	    player.getLocation().describeYourself();
 	    player.getLocation().setBeenHereBefore(true);
-	    System.out.println("  \nYou can move around by typing move and then north/south/west/east. You start with full health (100). You will have to learn more commands as you play the game! (Hint: there is a command \"help\").");
+	    System.out.println("  \nYou can move around by typing north/south/west/east. You start with full health (100). You will have to learn more commands as you play the game! (Hint: there is a command \"help\").");
 		
 		while (true) {
 	            String command;

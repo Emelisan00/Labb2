@@ -12,7 +12,6 @@ public class Player {
 	private String newCommand;
 
 	
-
 	public Player(String name, Location position, int health) {
 		this.name = name;
 		this.position = position;
@@ -21,8 +20,6 @@ public class Player {
 		dead = false;
 		items = new ArrayList<Item>();
 		scan = new Scanner(System.in);
-
-	
 	}
 
 	public void addItem(Item item) {
@@ -93,13 +90,15 @@ public class Player {
 
 			if (newCommand.equals(item.getName())) {
 				return item;
-
 			}
-
 		}
 		return new Item("noItem");
 	}
-
+	
+	public void help() {
+		System.out.println("This is how you play the game!\n\nYou can move around by typing north/south/west/east. You start with full health (100). The game ends if your health is 0 or if Melanthias health is 0.\nTo pick up an item you first type take and then type which item you want to pick up.\nTo use an item in your inventory simply type use and then type which item you want to use.\nTo drink a consumable item simply type drink and then type the item you want to drink.\nTo wear a wearabel item simply type wear and then type the wearable item.\nYou can see which items exists in a location by typing look.\nTo see which items are in inventory simply type items.\nIt is imposible to win the game if you havent drunk a specific potion.");
+	}
+	
 	public void doCommand(String command) {
 		if (command.equals("talk")) {
 			try {
@@ -146,12 +145,25 @@ public class Player {
 		} else if (command.equals("take")) {
 			System.out.println("What do you want to take?");
 			newCommand = scan.nextLine();
-			if (getLocation().getItem().getName().equals(newCommand)&& getLocation().getItem().getHasBeenTaken() == false) {
+			if (getLocation().getItem().getName().equals(newCommand)
+					&& getLocation().getItem().getHasBeenTaken() == false) {
 				items.add(getLocation().getItem());
 				getLocation().getItem().setHasBeenTaken(true);
 				System.out.println("You put the " + newCommand + " in your bag");
 			}
-		} else {
+		} else if (command.equals("look")) {
+			if (getLocation().getItem().getName().equals("noItem")|| getLocation().getItem().getHasBeenTaken() == true) {
+				System.out.println("There are no items in this location.");
+
+			} else {
+				System.out.println("This item exists in this location: ");
+				System.out.println(getLocation().getItem().getName());
+			}
+
+		} else if(command.equals("help")) {
+			help();
+		}else {
+		
 
 			position.doCommand(command, this);
 		}
@@ -159,10 +171,10 @@ public class Player {
 }
 
 //Vad vi har kvar
-// - abstracta klasser
+
 // - weather, size
-// - help
 // - static
+
 
 
 
